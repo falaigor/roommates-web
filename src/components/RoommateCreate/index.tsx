@@ -85,14 +85,14 @@ export const RoommateCreate = () => {
         <S.Loading>
           <div>
             <img src={documentSVG} alt="Loading" width="200px" />
-            Cadastrando Roommate!
+            Wait, we are registering the roommate!
           </div>
         </S.Loading>
       )}
-      <S.RoommatesMapContent onSubmit={handleSubmit}>
-        <S.Rooms>
+      <S.RoommatesFormContent onSubmit={handleSubmit}>
+        <S.RoomForm>
           <S.InputBlock>
-            <label htmlFor="title">Titulo</label>
+            <label htmlFor="title">Title</label>
             <Input
               id="title"
               name="title"
@@ -102,7 +102,7 @@ export const RoommateCreate = () => {
           </S.InputBlock>
 
           <S.InputBlock>
-            <label htmlFor="description">Descrição</label>
+            <label htmlFor="description">Description</label>
             <Textarea
               name="description"
               maxLength={300}
@@ -112,9 +112,9 @@ export const RoommateCreate = () => {
           </S.InputBlock>
 
           <S.InputBlock>
-            <label htmlFor="price">Preço</label>
+            <label htmlFor="price">Price</label>
             <CurrencyInput
-              placeholder="R$ 0,00"
+              placeholder="$ 0,00"
               type="text"
               id="price"
               name="price"
@@ -124,7 +124,7 @@ export const RoommateCreate = () => {
           </S.InputBlock>
 
           <S.InputBlock>
-            <label htmlFor="images">Fotos</label>
+            <label htmlFor="images">Photos</label>
 
             <S.ImagesContainer>
               {previewImages.map((image) => {
@@ -144,23 +144,29 @@ export const RoommateCreate = () => {
           </S.InputBlock>
 
           <S.InputBlock>
-            <S.Button type="submit">Cadastrar</S.Button>
+            <S.Button type="submit">Register</S.Button>
           </S.InputBlock>
-        </S.Rooms>
+        </S.RoomForm>
 
-        <S.Map id="map">
-          <MapContainer
-            zoom={15}
-            center={[position.latitude, position.longitude]}
-            style={{ width: "100%", height: "100%" }}
-          >
-            <TileLayer
-              url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
-            />
-            <MarkerMap />
-          </MapContainer>
-        </S.Map>
-      </S.RoommatesMapContent>
+        <div>
+          <S.TitleMap>Click on map to select location</S.TitleMap>
+          <S.Map id="map">
+            <MapContainer
+              zoom={15}
+              center={[position.latitude, position.longitude]}
+              style={{ width: "100%", height: "100%" }}
+            >
+              <TileLayer
+                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+              />
+              <MarkerMap />
+            </MapContainer>
+          </S.Map>
+        </div>
+        <S.InputBlockMobile>
+          <S.ButtonMobile type="submit">Register</S.ButtonMobile>
+        </S.InputBlockMobile>
+      </S.RoommatesFormContent>
     </S.RoommatesMapWrapper>
   );
 };

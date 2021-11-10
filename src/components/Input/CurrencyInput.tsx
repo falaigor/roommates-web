@@ -3,7 +3,7 @@ import createNumberMask from "text-mask-addons/dist/createNumberMask";
 import { InputHTMLAttributes } from "react";
 
 const defaultMaskOptions = {
-  prefix: "R$",
+  prefix: "$",
   suffix: "",
   includeThousandsSeparator: true,
   thousandsSeparatorSymbol: ".",

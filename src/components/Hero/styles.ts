@@ -26,6 +26,10 @@ export const HeroContent = styled.div`
       height: 700px;
       object-fit: cover;
     }
+
+    @media only screen and (max-width: 1024px) {
+      height: 550px;
+    }
   }
 `;
 
@@ -50,5 +54,9 @@ export const Button = styled(Link)`
 
   &:hover {
     background: var(--dark-blue);
+  }
+
+  @media only screen and (max-width: 1024px) {
+    top: -180px;
   }
 `;

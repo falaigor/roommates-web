@@ -7,7 +7,7 @@ export const RoommatesMapWrapper = styled.section`
   background: var(--white);
 `;
 
-export const RoommatesMapContent = styled(Form)`
+export const RoommatesFormContent = styled(Form)`
   width: 100%;
   max-width: 1480px;
   margin: 0 auto;
@@ -16,11 +16,16 @@ export const RoommatesMapContent = styled(Form)`
   display: grid;
   gap: 2rem;
   grid-template-columns: 1.2fr 2fr;
+
+  @media only screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
-export const Rooms = styled.div`
+export const RoomForm = styled.div`
   width: 100%;
-  height: 88vh;
+  height: 84vh;
   padding: 0 2rem;
   overflow: overlay;
 
@@ -32,56 +37,32 @@ export const Rooms = styled.div`
     border-radius: 0.4rem;
     background-color: var(--gray);
   }
-`;
 
-export const Room = styled.div`
-  width: 100%;
-  padding: 1rem;
-  border-radius: 0.4rem;
-  background: var(--white);
-  filter: drop-shadow(0 0 0.75rem #33333315);
-
-  margin: 0 0 2rem 0;
-  display: flex;
-
-  img {
-    width: 150px;
-    border-radius: 0.4rem;
-  }
-`;
-
-export const Info = styled.div`
-  display: flex;
-  padding: 0 1rem;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-export const Title = styled.h3``;
-
-export const Description = styled.div`
-  color: var(--gray);
-  font-size: 0.9rem;
-`;
-
-export const Address = styled.p`
-  font-size: 0.9rem;
-`;
-
-export const Price = styled.h3`
-  span {
-    font-size: 0.9rem;
-    font-weight: 400;
+  @media only screen and (max-width: 1024px) {
+    margin-top: 4rem;
+    height: auto;
   }
 `;
 
 export const Map = styled.div`
   width: 2fr;
-  height: 88vh;
+  height: 80vh;
   border-radius: 0.6rem;
   background: var(--white);
   filter: drop-shadow(0 0 0.75rem #33333315);
   overflow: hidden;
+
+  @media only screen and (max-width: 1024px) {
+    height: 50vh;
+  }
+`;
+
+export const TitleMap = styled.h3`
+  font-family: "DM Sans", sans-serif;
+  padding: 2rem 0;
+  @media only screen and (max-width: 1024px) {
+    padding: 1rem 2rem;
+  }
 `;
 
 export const InputBlock = styled.div`
@@ -165,6 +146,39 @@ export const ImagesContainer = styled.div`
 
 export const Button = styled.button`
   margin-top: 64px;
+  width: 100%;
+  height: 64px;
+  border: 0;
+  cursor: pointer;
+  background: var(--blue);
+  border-radius: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+  font-size: 1.1rem;
+  font-family: "DM Sans", sans-serif;
+
+  :hover {
+    background: var(--dark-blue);
+  }
+
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
+`;
+
+export const InputBlockMobile = styled(InputBlock)`
+  padding: 0 2rem;
+`;
+
+export const ButtonMobile = styled.button`
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  margin-top: 4px;
   width: 100%;
   height: 64px;
   border: 0;

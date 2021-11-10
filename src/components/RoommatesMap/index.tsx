@@ -98,7 +98,7 @@ export const RoommatesMap = () => {
                 >
                   <S.NewTooltip
                     direction="right"
-                    offset={[-15, -20]}
+                    offset={[-12, -20]}
                     opacity={1}
                     permanent
                   >
