@@ -54,34 +54,19 @@ export const RoommatesMap = () => {
             const image = images[0].path;
 
             return (
-              <>
-                <Room
-                  key={room.id}
-                  title={room.title}
-                  description={room.description}
-                  price={room.price}
-                  cover={image}
-                  onClick={() =>
-                    setPosition({
-                      latitude: room.latitude,
-                      longitude: room.longitude,
-                    })
-                  }
-                />
-                <Room
-                  key={room.id}
-                  title={room.title}
-                  description={room.description}
-                  price={room.price}
-                  cover={image}
-                  onClick={() =>
-                    setPosition({
-                      latitude: room.latitude,
-                      longitude: room.longitude,
-                    })
-                  }
-                />
-              </>
+              <Room
+                key={room.id}
+                title={room.title}
+                description={room.description}
+                price={room.price}
+                cover={image}
+                onClick={() =>
+                  setPosition({
+                    latitude: room.latitude,
+                    longitude: room.longitude,
+                  })
+                }
+              />
             );
           })}
         </S.Rooms>
