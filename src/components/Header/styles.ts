@@ -7,6 +7,12 @@ export const HeaderWrapper = styled.header`
   display: flex;
   background: var(--white);
   filter: drop-shadow(0 0 0.75rem #33333340);
+
+  @media only screen and (max-width: 1024px) {
+    z-index: 999;
+    position: fixed;
+    align-items: center;
+  }
 `;
 
 export const HeaderContent = styled.div`
@@ -17,6 +23,10 @@ export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Logo = styled.div`

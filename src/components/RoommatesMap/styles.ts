@@ -16,6 +16,16 @@ export const RoommatesMapContent = styled.div`
   display: grid;
   gap: 2rem;
   grid-template-columns: 1.2fr 2fr;
+
+  @media only screen and (max-width: 1024px) {
+    grid-template-columns: 100%;
+    grid-grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "map"
+      "rooms";
+    gap: 2rem;
+    padding: 0;
+  }
 `;
 
 export const Rooms = styled.div`
@@ -31,6 +41,11 @@ export const Rooms = styled.div`
   ::-webkit-scrollbar-thumb {
     border-radius: 0.4rem;
     background-color: var(--gray);
+  }
+
+  @media only screen and (max-width: 1024px) {
+    height: 52vh;
+    grid-area: rooms;
   }
 `;
 
@@ -87,6 +102,11 @@ export const Map = styled.div`
   background: var(--white);
   filter: drop-shadow(0 0 0.75rem #33333315);
   overflow: hidden;
+
+  @media only screen and (max-width: 1024px) {
+    height: 45vh;
+    grid-area: map;
+  }
 
   &.leaflet-tooltip {
     position: absolute;
