@@ -144,7 +144,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Commit Conventional: **[Commitlint](https://github.com/conventional-changelog/commitlint)**
 - Teste de API: **[Insomnia](https://insomnia.rest/)**
 - Ícones: **[Feather Icons](https://feathericons.com/)**
-- Fontes: **[Ubuntu](https://fonts.google.com/specimen/DM+Sans)**, **[Roboto](https://fonts.google.com/specimen/Roboto)**
+- Fontes: **[DM Sans](https://fonts.google.com/specimen/DM+Sans)**, **[Roboto](https://fonts.google.com/specimen/Roboto)**
 
 ## 💪 Como contribuir para o projeto
 
