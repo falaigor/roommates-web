@@ -25,13 +25,6 @@ export const Roommate = () => {
   const [room, setRoom] = useState<Room>();
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
-  const [position, setPosition] = useState({
-    latitude: -22.199547,
-    longitude: -47.3804479,
-  });
-
-  console.log(position);
-
   useEffect(() => {
     api.get(`/rooms/${params.id}`).then((response) => {
       setRoom(response.data);
