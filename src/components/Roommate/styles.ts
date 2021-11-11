@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Tooltip } from "react-leaflet";
-import { Link } from "react-router-dom";
 
 export const RoomWrapper = styled.section`
   width: 100%;
