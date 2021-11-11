@@ -1,4 +1,3 @@
-import { Form } from "@unform/web";
 import styled from "styled-components";
 
 export const RoommatesMapWrapper = styled.section`
@@ -7,7 +6,7 @@ export const RoommatesMapWrapper = styled.section`
   background: var(--white);
 `;
 
-export const RoommatesFormContent = styled(Form)`
+export const RoommatesFormContent = styled.form`
   width: 100%;
   max-width: 1480px;
   margin: 0 auto;
