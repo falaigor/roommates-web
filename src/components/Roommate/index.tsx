@@ -32,46 +32,45 @@ export const Roommate = () => {
 
   console.log(position);
 
-  // useEffect(() => {
-  //   api.get(`/rooms/${params.id}`).then((response) => {
-  //     setRoom(response.data);
-  //   });
-  // }, [params.id]);
+  useEffect(() => {
+    api.get(`/rooms/${params.id}`).then((response) => {
+      setRoom(response.data);
+    });
+  }, [params.id]);
 
-  // if (!room) {
-  //   return <p>Carregando...</p>;
-  // }
+  if (!room) {
+    return <p>Carregando...</p>;
+  }
 
   return (
     <S.RoomWrapper>
       <S.RoomContent>
         <S.ImageContainer>
-          <S.Image
-            src="https://images.ui8.net/uploads/unity-gaming-fullpreview-2_1602474763804.png"
-            alt="Alt"
-          />
+          <S.Image src={room.images[activeImageIndex].path} alt={room.title} />
 
           <S.Images>
-            <button
-              className={activeImageIndex === 1 ? "active" : ""}
-              type="button"
-              onClick={() => {
-                setActiveImageIndex(1);
-              }}
-            >
-              <img
-                src="https://images.ui8.net/uploads/unity-gaming-fullpreview-2_1602474763804.png"
-                alt="alt"
-              />
-            </button>
+            {room.images.map((image, index) => {
+              return (
+                <button
+                  className={activeImageIndex === index ? "active" : ""}
+                  key={image.id}
+                  type="button"
+                  onClick={() => {
+                    setActiveImageIndex(index);
+                  }}
+                >
+                  <img src={image.path} alt={room.title} />
+                </button>
+              );
+            })}
           </S.Images>
         </S.ImageContainer>
         <S.Info>
           <div>
-            <h2>Title</h2>
-            <p>Description</p>
+            <h2>{room.title}</h2>
+            <p>{room.description}</p>
           </div>
-          <S.Button>$1200/mounth</S.Button>
+          <S.Button>{room.price}/mounth</S.Button>
         </S.Info>
       </S.RoomContent>
 
@@ -79,24 +78,21 @@ export const Roommate = () => {
         <S.Map>
           <MapContainer
             zoom={15}
-            center={[position.latitude, position.longitude]}
+            center={[room.latitude, room.longitude]}
             style={{ width: "100%", height: "100%" }}
           >
             <TileLayer
               url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
             />
 
-            <Marker
-              icon={mapIcon}
-              position={[position.latitude, position.longitude]}
-            >
+            <Marker icon={mapIcon} position={[room.latitude, room.longitude]}>
               <S.NewTooltip
                 direction="right"
-                offset={[-16, -20]}
+                offset={[-8, -20]}
                 opacity={1}
                 permanent
               >
-                <span>Teste</span>
+                <span>Here</span>
               </S.NewTooltip>
             </Marker>
           </MapContainer>
