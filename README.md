@@ -10,7 +10,7 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 <h1 align="center">
-    <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/images/logo.svg" width="80px" />
+    <img alt="Roommates" title="Roommates" src="./src/images/logo.svg" width="80px" />
 </h1>
 
 <h4 align="center"> 
@@ -46,12 +46,12 @@ Projeto desenvolvido para fins de estudo.
 ## 🎨 Layout
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/images/image1.png" width="400px">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/images/image2.png" width="400px">
+  <img alt="Roommates" title="#Roommates" src="./src/images/image1.png" width="400px">
+  <img alt="Roommates" title="#Roommates" src="./src/images/image2.png" width="400px">
 </p>
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/images/image3.png" width="400px">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/images/image4.png" width="400px">
+  <img alt="Roommates" title="#Roommates" src="./src/images/image3.png" width="400px">
+  <img alt="Roommates" title="#Roommates" src="./src/images/image4.png" width="400px">
 </p>
 
 ---
@@ -157,10 +157,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 🦸 Autor
 
-<a href="https://blog.rocketseat.com.br/author/thiago/">
+<a href="https://www.linkedin.com/in/falaigor/">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/40046196?v=4" width="100px;" alt=""/>
  <br />
- <sub><b>Igor Santos</b></sub></a> <a href="https://instagram.com/falaigors/" title="Instagram Igor Santos">🚀</a>
+ <sub><b>Igor Santos</b></sub></a> <a href="https://www.linkedin.com/in/falaigor/" title="Linkedin Igor Santos">🚀</a>
  <br />
 
 [![Twitter Badge](https://img.shields.io/badge/-@falaigors-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/falaigors)](https://twitter.com/falaigors)
