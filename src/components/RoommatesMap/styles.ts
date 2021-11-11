@@ -1,4 +1,6 @@
 import { Tooltip } from "react-leaflet";
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 
 export const RoommatesMapWrapper = styled.section`
@@ -59,8 +61,6 @@ export const Room = styled.div`
   margin: 0 0 2rem 0;
   display: flex;
 
-  cursor: pointer;
-
   img {
     width: 150px;
     height: 150px;
@@ -75,6 +75,8 @@ export const Info = styled.div`
   padding: 0 1rem;
   flex-direction: column;
   justify-content: space-between;
+
+  cursor: pointer;
 `;
 
 export const Title = styled.h3``;
@@ -134,5 +136,36 @@ export const NewTooltip = styled(Tooltip)`
 
   ::before {
     border-right-color: #fff0 !important;
+  }
+`;
+
+export const Image = styled(Link)`
+  cursor: pointer;
+  position: relative;
+
+  div {
+    width: 150px;
+    height: 150px;
+    top: 0;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    color: white;
+    text-align: center;
+    border-radius: 0.4rem;
+    font-family: "DM Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+
+    :hover {
+      opacity: 1;
+    }
   }
 `;

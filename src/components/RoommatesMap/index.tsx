@@ -1,13 +1,14 @@
-import { useEffect, useMemo, useState } from "react";
+import api from "../../services/api";
+import { useEffect, useState } from "react";
 import { Room } from "./Room";
 import { MapContainer, TileLayer, Marker, MapConsumer } from "react-leaflet";
+import { AppRoute } from "../../routes/routes";
 
-import * as S from "./styles";
 import mapIcon from "../../utils/mapIcon";
-import api from "../../services/api";
+import * as S from "./styles";
 
 interface RoomsProps {
-  id: number;
+  id: string;
   title: string;
   description: string;
   price: string;
@@ -33,18 +34,6 @@ export const RoommatesMap = () => {
     });
   }, []);
 
-  const [clickedCount, setClickedCount] = useState(0);
-
-  const eventHandlers = useMemo(
-    () => ({
-      click() {
-        setClickedCount((count) => count + 1);
-        console.log(clickedCount);
-      },
-    }),
-    []
-  );
-
   return (
     <S.RoommatesMapWrapper>
       <S.RoommatesMapContent>
@@ -59,8 +48,9 @@ export const RoommatesMap = () => {
                 title={room.title}
                 description={room.description}
                 price={room.price}
+                href={`${AppRoute.Roommates}/${room.id}`}
                 cover={image}
-                onClick={() =>
+                centerPosition={() =>
                   setPosition({
                     latitude: room.latitude,
                     longitude: room.longitude,
@@ -94,11 +84,10 @@ export const RoommatesMap = () => {
                   key={room.id}
                   icon={mapIcon}
                   position={[room.latitude, room.longitude]}
-                  eventHandlers={eventHandlers}
                 >
                   <S.NewTooltip
                     direction="right"
-                    offset={[-12, -20]}
+                    offset={[-16, -20]}
                     opacity={1}
                     permanent
                   >
