@@ -10,11 +10,11 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 <h1 align="center">
-    <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/images/logo.svg" width="150px />
+    <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/images/logo.svg" width="80px" />
 </h1>
 
 <h4 align="center"> 
-	🏠 Roommates 🚧
+	Roommates 🚧
 </h4>
 
 <p align="center">
