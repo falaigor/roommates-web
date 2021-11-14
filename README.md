@@ -65,7 +65,7 @@ Este projeto é divido em duas partes:
 
 💡Frontend precisa que o Backend esteja sendo executado para funcionar.
 
-### Pré-requisitos
+### 💡 Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) versão 14.x.
@@ -107,6 +107,15 @@ Renomeie o `.env.example` no diretório raiz para `.env` e atualize com suas con
 | REACT_APP_BASEURL_API  | URL da API Backend | `http://localhost:4000`   |
 
 ---
+
+## 💻 New Features
+[] Login por Github, Google, Facebook, etc;
+[] Cadastros de quartos com status de "pendente";
+[] Adicionar barra de progressão no cadastro de quartos;
+[] Dashboard administrativo;
+[] Cadastro de usuarios separados por "role";
+[] Desenvolver um app mobile;
+[] DarkMode;
 
 ## 🛠 Tecnologias
 
