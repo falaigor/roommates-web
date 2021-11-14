@@ -109,13 +109,13 @@ Renomeie o `.env.example` no diretório raiz para `.env` e atualize com suas con
 ---
 
 ## 💻 New Features
-[] Login por Github, Google, Facebook, etc;
-[] Cadastros de quartos com status de "pendente";
-[] Adicionar barra de progressão no cadastro de quartos;
-[] Dashboard administrativo;
-[] Cadastro de usuarios separados por "role";
-[] Desenvolver um app mobile;
-[] DarkMode;
+[ ] Login por Github, Google, Facebook, etc; <br/>
+[ ] Cadastros de quartos com status de "pendente";<br/>
+[ ] Adicionar barra de progressão no cadastro de quartos;<br/>
+[ ] Dashboard administrativo;<br/>
+[ ] Cadastro de usuarios separados por "role";<br/>
+[ ] Desenvolver um app mobile;<br/>
+[ ] DarkMode;<br/>
 
 ## 🛠 Tecnologias
 
