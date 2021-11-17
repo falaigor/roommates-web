@@ -33,11 +33,11 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   color: var(--black);
-  background: var(--light-blue);
+  background: var(--white);
 }
 
 body, input, textarea, button {
-  font: 400 1rem "Roboto", sans-serif;
+  font: 400 1rem "DM Sans",sans-serif;
 }
 
 button {

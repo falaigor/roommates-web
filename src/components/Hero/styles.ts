@@ -1,35 +1,30 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const HeroWrapper = styled.section`
-  width: 100%;
-  height: 100%;
+export const HeroContainer = styled.section`
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
 `;
 
 export const HeroContent = styled.div`
+  display: grid;
+  height: 100%;
   width: 100%;
-  height: 700px;
+  max-width: 1480px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
 
-  div {
-    width: 100%;
-    height: 700px;
-    position: relative;
-    background: rgb(250, 250, 250);
-    clip-path: polygon(0% 0%, 100% 0, 100% 94%, 50% 100%, 0 94%);
-    z-index: 1;
+  h1 {
+    font-size: 6rem;
+    line-height: 5rem;
+    margin-bottom: 4rem;
+  }
 
-    img {
-      width: 100%;
-      height: 700px;
-      object-fit: cover;
-    }
-
-    @media only screen and (max-width: 1024px) {
-      height: 550px;
-    }
+  p {
+    margin-bottom: 2rem;
   }
 `;
 
@@ -41,12 +36,7 @@ export const Button = styled(Link)`
   border-radius: 0.4rem;
   color: var(--white);
   font-size: 1.15rem;
-  font-family: "DM Sans", sans-serif;
-  top: -30px;
-  position: relative;
-  z-index: 2;
   transition: all 0.2s ease;
-  filter: drop-shadow(0 0 0.75rem #333);
 
   display: flex;
   align-items: center;
@@ -54,9 +44,5 @@ export const Button = styled(Link)`
 
   &:hover {
     background: var(--dark-blue);
-  }
-
-  @media only screen and (max-width: 1024px) {
-    top: -180px;
   }
 `;

@@ -1,16 +1,19 @@
 import * as S from "./styles";
 
-import imgSlider from "../../images/roommates-sharing-happy-moments-together.jpg";
+import LandingImg from "../../images/humans.svg";
 
 export const Hero = () => {
   return (
-    <S.HeroWrapper>
+    <S.HeroContainer>
       <S.HeroContent>
-        <div className="curve">
-          <img src={imgSlider} alt="" width="100%" />
+        <div>
+          <h1>Encontre um amigo de quarto</h1>
+
+          <S.Button to="/">Encontre um quarto</S.Button>
         </div>
+
+        <img src={LandingImg} alt="" width="100%" />
       </S.HeroContent>
-      <S.Button to="/roommates">Find your roommate</S.Button>
-    </S.HeroWrapper>
+    </S.HeroContainer>
   );
 };

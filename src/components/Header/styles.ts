@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.header`
   height: 3.8rem;
   display: flex;
   background: var(--white);
-  filter: drop-shadow(0 0 0.75rem #33333340);
+  position: fixed;
 
   @media only screen and (max-width: 1024px) {
     z-index: 999;
@@ -31,15 +31,20 @@ export const HeaderContent = styled.div`
 
 export const Logo = styled.div`
   font-size: 1.4em;
+
+  strong {
+    color: var(--blue);
+  }
 `;
 
 export const Button = styled(Link)`
   width: 100%;
-  max-width: 10rem;
+  max-width: 8rem;
   height: 2.6rem;
-  background: var(--blue);
+  background: var(--white);
+  border: 2px solid var(--blue);
   border-radius: 0.4rem;
-  color: var(--white);
+  color: var(--blue);
   font-size: 1rem;
   font-family: "DM Sans", sans-serif;
 
@@ -52,6 +57,7 @@ export const Button = styled(Link)`
   justify-content: center;
 
   &:hover {
+    color: var(--white);
     background: var(--dark-blue);
   }
 `;
