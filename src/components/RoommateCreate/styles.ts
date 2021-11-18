@@ -10,7 +10,7 @@ export const RoommatesFormContent = styled.form`
   width: 100%;
   max-width: 1480px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 5rem 0 0 0;
 
   display: grid;
   gap: 2rem;

@@ -1,6 +1,7 @@
 import * as S from "./styles";
 
 import LandingImg from "../../images/humans.svg";
+import { AppRoute } from "../../routes/routes";
 
 export const Hero = () => {
   return (
@@ -9,7 +10,7 @@ export const Hero = () => {
         <div>
           <h1>Encontre um amigo de quarto</h1>
 
-          <S.Button to="/">Encontre um quarto</S.Button>
+          <S.Button to={AppRoute.Roommates}>Encontre um quarto</S.Button>
         </div>
 
         <img src={LandingImg} alt="" width="100%" />
