@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -37,7 +36,7 @@ export const Logo = styled.div`
   }
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.a`
   width: 100%;
   max-width: 8rem;
   height: 2.6rem;
@@ -47,6 +46,33 @@ export const Button = styled(Link)`
   color: var(--blue);
   font-size: 1rem;
   font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 2;
+  transition: all 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: var(--white);
+    background: var(--dark-blue);
+  }
+`;
+
+export const ButtonLogout = styled.button`
+  width: 100%;
+  max-width: 8rem;
+  height: 2.6rem;
+  background: var(--white);
+  border: 2px solid var(--blue);
+  border-radius: 0.4rem;
+  color: var(--blue);
+  font-size: 1rem;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
 
   position: relative;
   z-index: 2;
