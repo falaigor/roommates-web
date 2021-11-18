@@ -73,7 +73,7 @@ export const RoommateCreate = () => {
       data.append("images", image);
     });
 
-    await api.post("/room", data);
+    await api.post("room", data);
 
     setLoading(false);
     navigate(AppRoute.Roommates);
