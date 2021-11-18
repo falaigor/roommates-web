@@ -33,10 +33,11 @@ type AuthResponse = {
 export function AuthProvider(props: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null);
 
-  const client_id =
-    "658909344329-0f0pdiip1uhbsd9agne2jgtgbjjsv9d7.apps.googleusercontent.com";
-  const client_secret = "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";
-  const signInUrl = `https://accounts.google.com/o/oauth2/v2/auth?response_type=token&client_id=${client_id}&cliente_secrete=${client_secret}&scope=profile&redirect_uri=http://localhost:3000/`;
+  const client_id = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  const client_secret = process.env.REACT_APP_GOOGLE_CLIENT_SECRET;
+  const redirect_uri = process.env.REACT_APP_GOOGLE_REDIRECT_URI;
+
+  const signInUrl = `https://accounts.google.com/o/oauth2/v2/auth?response_type=token&client_id=${client_id}&cliente_secrete=${client_secret}&scope=profile&redirect_uri=${redirect_uri}`;
 
   async function signIn(googleAccessToken: string) {
     const response = await api.post<AuthResponse>("authenticate", {
